@@ -3,14 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }  from './app.component';
 import { HighlightDirective }  from './highlight.directive';
 import { TitleComponent }  from './title.component';
+import {UserService } from './user.service';
+import {FormsModule} from '@angular/forms';
+import {ContactService} from './contact/contact.service';
+import {AwesomePipe} from './contact/awesome.pipe';
+import {ContactComponent} from './contact/contact.component';
+import {HighlightDirective as ContactHighlightDirective} from './contact/highlight.directive';
 
 @NgModule({
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule],
   declarations: [
     AppComponent,
     HighlightDirective,
-    TitleComponent
+    TitleComponent,
+    AwesomePipe,
+    ContactComponent,
+    ContactHighlightDirective
   ],
+  providers: [ContactService, UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
