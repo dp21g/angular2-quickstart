@@ -6,10 +6,11 @@ import
        { ContactComponent }   from './contact.component';
 import { ContactService }     from './contact.service';
 import { HighlightDirective } from './highlight.directive';
+import { routing } from './contact.routing';
+
 @NgModule({
-  imports:      [ CommonModule, FormsModule ],
+  imports:      [ CommonModule, FormsModule, routing ],
   declarations: [ ContactComponent, HighlightDirective, AwesomePipe ],
-  exports:      [ ContactComponent ],
   providers:    [ ContactService ]
 })
 export class ContactModule { }
