@@ -7,7 +7,6 @@ import { TitleComponent }  from './title.component';
 import {UserService } from './user.service';
 
 import {FormsModule} from '@angular/forms';
-import {HighlightDirective as ContactHighlightDirective} from './contact/highlight.directive';
 import {ContactModule} from './contact/contact.module';
 import { routing } from './app.routing';
 
