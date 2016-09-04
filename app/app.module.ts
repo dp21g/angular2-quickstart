@@ -2,7 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
-import { HighlightDirective }  from './highlight.directive';
+import {SharedModule}          from './shared/shared.module';
 import { TitleComponent }  from './title.component';
 import {UserService } from './user.service';
 
@@ -11,11 +11,10 @@ import {ContactModule} from './contact/contact.module';
 import { routing } from './app.routing';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ContactModule, routing],
+  imports: [BrowserModule, FormsModule, ContactModule, routing, SharedModule],
   declarations: [
     AppComponent,
-    HighlightDirective,
-    TitleComponent
+    TitleComponent,
   ],
   providers: [UserService ],
   bootstrap: [AppComponent]
